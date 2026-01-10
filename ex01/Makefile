@@ -1,12 +1,26 @@
 NAME = phonebook
 
 CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = contact.cpp
+SRC = contact.cpp \
+			phonebook.cpp \
+			main.cpp
+
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$()
+	@echo "---- Building of $(NAME) ----$(RESET)";
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+
+clean:
+	rm -rf $(OBJ)
+
+fclean: clean
+	rm -rf $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
