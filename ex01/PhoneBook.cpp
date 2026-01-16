@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 20:10:06 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/16 20:43:33 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/16 21:04:51 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int	PhoneBook::searchContact()
 	}
 	std::cout << "Select a valid index: ";
 	std::cin >> index;
+	// usa stringstream
 	while (std::cin.fail() || index < 0 || index > count - 1)
 	{
 		std::cout << "Error, select a valid index: ";

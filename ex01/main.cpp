@@ -6,13 +6,14 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 01:10:46 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/16 20:59:19 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/16 21:04:01 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include <string>
 #include <iostream>
+#include <sstream>
 
 void createContact(PhoneBook *phonebook)
 {
