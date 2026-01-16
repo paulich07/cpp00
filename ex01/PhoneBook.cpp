@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 01:10:55 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/10 17:55:36 by plichota         ###   ########.fr       */
+/*   Created: 2025/12/15 20:10:06 by plichota          #+#    #+#             */
+/*   Updated: 2026/01/16 13:57:03 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,24 @@
 
 PhoneBook::PhoneBook()
 {
-  count = 0;
+	count = 0;
+	std::cout << "constructor PhoneBook called" << std::endl;
 }
 
-void PhoneBook::addContact(Contact newContact)
+int PhoneBook::addContact(const Contact &contact)
 {
-  if (count < 8)
-  {
-    contacts[count] = newContact;
-    count++;
-  }
-  else
-  {
-    for (size_t i = 0; i < count; i++)
-    {
-      contacts[i] = contacts[i + 1];
-    }
-    contacts[count - 1] = newContact;
-  }
+	if (count < 8)
+	{
+		contacts[count] = contact;
+		count++;
+	}
+	else
+	{
+		for (int i = 0; i < 7; i++)
+		{
+			contacts[i] = contacts[i + 1];
+		}
+		contacts[7] = contact;
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 01:10:57 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/10 17:51:20 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/16 13:52:14 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PHONEBOOK_HPP
 
 #include "Contact.hpp"
+#include "cstdlib"
+#include "iostream"
 
 class PhoneBook
 {
@@ -23,8 +25,8 @@ class PhoneBook
   public:
     PhoneBook();
 
-    void addContact(Contact newContact);
-    void searchContact(std::string input);
+    int addContact(Contact newContact);
+    int searchContact(std::string input);
     // void displayPhoneBook();
 };
 

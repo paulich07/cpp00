@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 01:10:48 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/10 17:46:42 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/16 13:27:08 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ class Contact
     std::string first_name;
     std::string last_name;
     std::string nickname;
+    std::string phone;
     std::string darkest_secret;
-    int phone;
   public:
     Contact();
     Contact(std::string first_name,
             std::string last_name,
             std::string nickname,
-            std::string darkest_secret,
-            int phone
+            std::string phone,
+            std::string darkest_secret
           );
     void printFullContact();
     void printPartialContact();
