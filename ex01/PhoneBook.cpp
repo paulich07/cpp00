@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 20:10:06 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/16 13:57:03 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/16 20:41:28 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 PhoneBook::PhoneBook()
 {
 	count = 0;
-	std::cout << "constructor PhoneBook called" << std::endl;
+	// std::cout << "constructor PhoneBook called" << std::endl;
 }
 
+// aggiunge contatto, se sono più di 8 sovrascrive il piu' vecchio
 int PhoneBook::addContact(const Contact &contact)
 {
 	if (count < 8)
@@ -33,5 +34,31 @@ int PhoneBook::addContact(const Contact &contact)
 		}
 		contacts[7] = contact;
 	}
+	return (0);
+}
+
+int	PhoneBook::searchContact()
+{
+	int	index;
+
+	if (count == 0)
+	{
+		std::cout << "Empty phonebook" << std::endl;
+		return (0);
+	}
+	for (int i = 0; i < count; i++)
+	{
+		std::cout << i << "| ";
+		contacts[i].printPartialContact();
+		std::cout << std::endl;
+	}
+	std::cout << "Select a valid index: ";
+	std::cin >> index;
+	while (std::cin.fail() || index < 0 || index > count - 1)
+	{
+		std::cout << "Error, select a valid index: ";
+		std::cin >> index;
+	}
+	contacts[index].printFullContact();
 	return (0);
 }
