@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 01:10:46 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/16 20:42:39 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/16 20:59:19 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,31 +24,31 @@ void createContact(PhoneBook *phonebook)
   std::string phone;
 
   std::cout << "Enter first name: ";
-  while (!(std::cin >> first_name) || first_name.empty())
+  while (!std::getline(std::cin, first_name) || first_name.empty())
   {
     std::cout << "Error reading first name." << std::endl;
     return;
   }
   std::cout << "Enter last name: ";
-  while (!(std::cin >> last_name) || last_name.empty()) // getline
+  while (!std::getline(std::cin, last_name) || last_name.empty()) // getline
   {
     std::cout << "Error reading last name." << std::endl;
     return;
   }
   std::cout << "Enter nickname: ";
-  while (!(std::cin >> nickname) || nickname.empty())
+  while (!std::getline(std::cin, nickname) || nickname.empty())
   {
     std::cout << "Error reading nickname." << std::endl;
     return;
   }
   std::cout << "Enter phone number: ";
-  while (!(std::cin >> phone) || phone.empty())
+  while (!std::getline(std::cin, phone) || phone.empty())
   {
     std::cout << "Error reading phone number." << std::endl;
     return;
   }
   std::cout << "Enter darkest secret: ";
-  while (!(std::cin >> darkest_secret) || darkest_secret.empty())
+  while (!std::getline(std::cin, darkest_secret) || darkest_secret.empty())
   {
     std::cout << "Error reading darkest secret." << std::endl;
     return;
