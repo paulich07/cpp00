@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 20:10:06 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/16 21:04:51 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:48:08 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	PhoneBook::searchContact()
 	}
 	for (int i = 0; i < count; i++)
 	{
-		std::cout << i << "| ";
+		std::cout << i;
 		contacts[i].printPartialContact();
 		std::cout << std::endl;
 	}

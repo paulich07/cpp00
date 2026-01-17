@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:23:36 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/16 20:53:37 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:48:16 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void Contact::printFullContact()
 
 void Contact::printPartialContact()
 {
-  std::cout << " |" << std::setw(10) << std::left << first_name.substr(0, 10);
-  std::cout << " |" << std::setw(10) << std::left << last_name.substr(0, 10);
-  std::cout << " |" << std::setw(10) << std::left << nickname.substr(0, 10);
+  std::cout << " | " << std::setw(10) << std::left << first_name.substr(0, 10);
+  std::cout << " | " << std::setw(10) << std::left << last_name.substr(0, 10);
+  std::cout << " | " << std::setw(10) << std::left << nickname.substr(0, 10);
 }

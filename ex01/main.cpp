@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 01:10:46 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/16 21:04:01 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:47:28 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int main(void)
   while (1)
   {
     std::cout << GREEN << "What do you want to do? Please enter ADD, SEARCH, or EXIT" << RESET << std::endl;
-    std::cin >> input;
+    std::getline(std::cin, input);
     if (input == "ADD")
       createContact(&phonebook);
     else if (input == "SEARCH")
