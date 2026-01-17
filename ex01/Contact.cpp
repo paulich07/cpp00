@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:23:36 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/17 13:21:23 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/17 13:22:56 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ Contact::Contact(std::string first_name, std::string last_name,
 
 void Contact::printFullContact()
 {
-  std::cout << std::setw(13) << std::left << "First name: " << first_name << std::endl;
-  std::cout << std::setw(13) << std::left << "Last name: " << last_name << std::endl;
-  std::cout << std::setw(13) << std::left << "Nickname: " << nickname << std::endl;
-  std::cout << std::setw(13) << std::left << "Phone: " << phone << std::endl;
-  std::cout << std::setw(13) << std::left << "Secret: " << darkest_secret << std::endl;
+  std::cout << std::setw(12) << std::left << "First name: " << first_name << std::endl;
+  std::cout << std::setw(12) << std::left << "Last name: " << last_name << std::endl;
+  std::cout << std::setw(12) << std::left << "Nickname: " << nickname << std::endl;
+  std::cout << std::setw(12) << std::left << "Phone: " << phone << std::endl;
+  std::cout << std::setw(12) << std::left << "Secret: " << darkest_secret << std::endl;
 }
 
 void Contact::printPartialContact()

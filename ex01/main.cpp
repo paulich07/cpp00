@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 01:10:46 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/17 12:47:28 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/17 13:44:35 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,31 +28,31 @@ void createContact(PhoneBook *phonebook)
   while (!std::getline(std::cin, first_name) || first_name.empty())
   {
     std::cout << "Error reading first name." << std::endl;
-    return;
+    std::cout << "Enter first name: ";
   }
   std::cout << "Enter last name: ";
   while (!std::getline(std::cin, last_name) || last_name.empty()) // getline
   {
     std::cout << "Error reading last name." << std::endl;
-    return;
+    std::cout << "Enter last name: ";
   }
   std::cout << "Enter nickname: ";
   while (!std::getline(std::cin, nickname) || nickname.empty())
   {
     std::cout << "Error reading nickname." << std::endl;
-    return;
+    std::cout << "Enter nickname: ";
   }
   std::cout << "Enter phone number: ";
   while (!std::getline(std::cin, phone) || phone.empty())
   {
     std::cout << "Error reading phone number." << std::endl;
-    return;
+    std::cout << "Enter phone number: ";
   }
   std::cout << "Enter darkest secret: ";
   while (!std::getline(std::cin, darkest_secret) || darkest_secret.empty())
   {
     std::cout << "Error reading darkest secret." << std::endl;
-    return;
+    std::cout << "Enter darkest secret: ";
   }
   contact = Contact(first_name, last_name, nickname, phone, darkest_secret);
   phonebook->addContact(contact);
@@ -62,6 +62,17 @@ int main(void)
 {
   PhoneBook phonebook;
   std::string input;
+
+  // Mock contacts
+  Contact contact1("John", "Doe", "Johnny", "1234567890", "Loves pizza");
+  Contact contact2("Jane", "Smith", "Janey", "0987654321", "Afraid of spiders");
+  phonebook.addContact(contact1);
+  phonebook.addContact(contact2);
+  phonebook.addContact(contact1);
+  phonebook.addContact(contact2);
+  phonebook.addContact(contact1);
+  phonebook.addContact(contact2);
+  phonebook.addContact(contact2);
 
   while (1)
   {
