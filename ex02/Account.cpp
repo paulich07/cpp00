@@ -6,12 +6,14 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 16:16:20 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/17 17:04:21 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/17 18:37:21 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include "iostream"
+#include "ctime"
+#include "iomanip"
 
 int  Account::_nbAccounts = 0;
 int  Account::_totalAmount = 0;
@@ -94,13 +96,20 @@ int Account::checkAmount() const
     return (_amount);
 }
 
-void Account::displayStatus()
+// to do
+void Account::displayStatus() const
 {
-    
+    std::cout << "status" << std::endl;
 }
 
-
-void Account::displayTimestamp()
+// to do
+void Account::_displayTimestamp()
 {
-    
+    time_t timestamp = time(NULL);
+    struct tm dt = *localtime(&timestamp);
+
+    std::cout << "[" << dt.tm_year << dt.tm_mon << dt.tm_mday;
+    std::cout << "_" << std::setw(2) << std::setfill('0') << dt.tm_hour;
+    std::cout << dt.tm_min << dt.tm_sec << "]" << std::endl;
+
 }
