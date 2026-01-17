@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 01:10:57 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/16 20:43:22 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/17 13:15:29 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #define RESET   "\033[0m"
 #define GREEN   "\033[32m"
+#define CYAN    	"\033[0;36m"
 
 #include "Contact.hpp"
 #include "cstdlib"

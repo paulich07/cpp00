@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 20:10:06 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/17 12:48:08 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/17 13:18:58 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,27 +39,28 @@ int PhoneBook::addContact(const Contact &contact)
 
 int	PhoneBook::searchContact()
 {
-	int	index;
+	std::string	s;
+	long l;
+	char *end;
 
 	if (count == 0)
 	{
 		std::cout << "Empty phonebook" << std::endl;
 		return (0);
 	}
+	std::cout << CYAN << "i | First name | Last name  | Nickname" << RESET << std::endl;		
 	for (int i = 0; i < count; i++)
 	{
 		std::cout << i;
 		contacts[i].printPartialContact();
 		std::cout << std::endl;
 	}
-	std::cout << "Select a valid index: ";
-	std::cin >> index;
-	// usa stringstream
-	while (std::cin.fail() || index < 0 || index > count - 1)
+	do
 	{
-		std::cout << "Error, select a valid index: ";
-		std::cin >> index;
-	}
-	contacts[index].printFullContact();
+		std::cout << GREEN << "Select a valid index: " << RESET;
+		std::getline(std::cin, s);
+		l = std::strtol(s.c_str(), &end, 10);
+	} while (std::cin.fail() || !end || *end != '\0'|| l < 0 || l > count - 1);
+	contacts[l].printFullContact();
 	return (0);
 }
