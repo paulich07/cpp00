@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:23:36 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/17 13:22:56 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/17 14:21:41 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,11 @@ void Contact::printFullContact()
 
 void Contact::printPartialContact()
 {
-  std::cout << " | " << std::setw(10) << std::left << first_name.substr(0, 10);
-  std::cout << " | " << std::setw(10) << std::left << last_name.substr(0, 10);
-  std::cout << " | " << std::setw(10) << std::left << nickname.substr(0, 10);
+  std::string first = (first_name.length() > 10) ? first_name.substr(0, 10).replace(9, 1, 1, '.') : first_name;
+  std::string last = (last_name.length() > 10) ? last_name.substr(0, 10).replace(9, 1, 1, '.') : last_name;
+  std::string nick = (nickname.length() > 10) ? nickname.substr(0, 10).replace(9, 1, 1, '.') : nickname;
+
+  std::cout << " | " << std::setw(10) << std::right << first;
+  std::cout << " | " << std::setw(10) << std::right << last;
+  std::cout << " | " << std::setw(10) << std::right << nick;
 }
