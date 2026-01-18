@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 01:10:46 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/17 16:20:38 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/18 16:19:01 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,15 +63,15 @@ int main(void)
   std::string input;
 
   // Mock contacts
-  Contact contact1("John", "Doe", "Johnny", "1234567890", "Loves pizza");
-  Contact contact2("Jane", "Smith", "Janey", "0987654321", "Afraid of spiders");
-  phonebook.addContact(contact1);
-  phonebook.addContact(contact2);
-  phonebook.addContact(contact1);
-  phonebook.addContact(contact2);
-  phonebook.addContact(contact1);
-  phonebook.addContact(contact2);
-  phonebook.addContact(contact2);
+  // Contact contact1("John", "Doe", "Johnny", "1234567890", "Loves pizza");
+  // Contact contact2("Jane", "Smith", "Janey", "0987654321", "Afraid of spiders");
+  // phonebook.addContact(contact1);
+  // phonebook.addContact(contact2);
+  // phonebook.addContact(contact1);
+  // phonebook.addContact(contact2);
+  // phonebook.addContact(contact1);
+  // phonebook.addContact(contact2);
+  // phonebook.addContact(contact2);
 
   while (1)
   {

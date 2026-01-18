@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 20:10:06 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/17 13:18:58 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/18 16:18:49 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	PhoneBook::searchContact()
 		std::cout << "Empty phonebook" << std::endl;
 		return (0);
 	}
-	std::cout << CYAN << "i | First name | Last name  | Nickname" << RESET << std::endl;		
+	std::cout << CYAN << "i|First name| Last name|  Nickname" << RESET << std::endl;		
 	for (int i = 0; i < count; i++)
 	{
 		std::cout << i;

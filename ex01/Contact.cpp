@@ -6,7 +6,7 @@
 /*   By: plichota <plichota@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:23:36 by plichota          #+#    #+#             */
-/*   Updated: 2026/01/17 14:21:41 by plichota         ###   ########.fr       */
+/*   Updated: 2026/01/18 16:19:27 by plichota         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ Contact::Contact(std::string first_name, std::string last_name,
 
 void Contact::printFullContact()
 {
-  std::cout << std::setw(12) << std::left << "First name: " << first_name << std::endl;
-  std::cout << std::setw(12) << std::left << "Last name: " << last_name << std::endl;
-  std::cout << std::setw(12) << std::left << "Nickname: " << nickname << std::endl;
-  std::cout << std::setw(12) << std::left << "Phone: " << phone << std::endl;
-  std::cout << std::setw(12) << std::left << "Secret: " << darkest_secret << std::endl;
+  std::cout << std::setw(12) << std::right << "First name: " << first_name << std::endl;
+  std::cout << std::setw(12) << std::right << "Last name: " << last_name << std::endl;
+  std::cout << std::setw(12) << std::right << "Nickname: " << nickname << std::endl;
+  std::cout << std::setw(12) << std::right << "Phone: " << phone << std::endl;
+  std::cout << std::setw(12) << std::right << "Secret: " << darkest_secret << std::endl;
 }
 
 void Contact::printPartialContact()
@@ -48,7 +48,7 @@ void Contact::printPartialContact()
   std::string last = (last_name.length() > 10) ? last_name.substr(0, 10).replace(9, 1, 1, '.') : last_name;
   std::string nick = (nickname.length() > 10) ? nickname.substr(0, 10).replace(9, 1, 1, '.') : nickname;
 
-  std::cout << " | " << std::setw(10) << std::right << first;
-  std::cout << " | " << std::setw(10) << std::right << last;
-  std::cout << " | " << std::setw(10) << std::right << nick;
+  std::cout << "|" << std::setw(10) << std::right << first;
+  std::cout << "|" << std::setw(10) << std::right << last;
+  std::cout << "|" << std::setw(10) << std::right << nick;
 }
